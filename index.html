@@ -22,7 +22,7 @@
     for(i=0; i<200; i+=10){
        
     ct1.moveTo(i+150, 200);
-    ct1.quadraticCurveTo(150+i/2,start.y+ (j/200)*(end.y-start.y) , 150+ .001*j*end.x+.001*(100-j)*i, start.y+ (j/100)*(end.y-start.y) )
+    ct1.quadraticCurveTo(150+i/2,start.y+ (j/200)*(end.y-start.y) , 150+ .01*j*end.x+.01*(100-j)*i, start.y+ (j/100)*(end.y-start.y) )
     }
     ct1.stroke();
     if (j<100){setTimeout(grow,9)}
