@@ -17,15 +17,15 @@
      
   function grow(){
     j++
+     ct1.clearRect(0,0,400,400)
       ct1.beginPath();
     for(i=0; i<200; i+=10){
        
-    
     ct1.moveTo(i+150, 200);
     ct1.quadraticCurveTo(150+i/2,start.y+ (j/200)*(end.y-start.y) , end.x, start.y+ (j/100)*(end.y-start.y) )
     }
     ct1.stroke();
-    if (j<100){setTimeout(grow,90)}
+    if (j<100){setTimeout(grow,9)}
   }
      
    setTimeout(grow,350)
