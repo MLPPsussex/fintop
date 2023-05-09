@@ -6,26 +6,26 @@
   <script>
     var c1 = document.getElementById('canvas');
     var ct1 = c1.getContext('2d');
-   var i,j=200
+   var i,j=0
     // Set canvas dimensions
     c1.width = 800;
     c1.height = 800;
-    end ={x: 360, y: 20}
+    end ={x: 280, y: 20}
     start ={x:0, y: 200}
      
    
      
   function grow(){
-     j--
+    j++
       ct1.beginPath();
     for(i=0; i<200; i+=10){
        
     
     ct1.moveTo(i+150, 200);
-    ct1.quadraticCurveTo(150+i/2,start.y+ (i/400)*(end.y-start.y) , 280, start.y+ (i/200)*(end.y-start.y) )
+    ct1.quadraticCurveTo(150+i/2,start.y+ (j/200)*(end.y-start.y) , end.x, start.y+ (j/100)*(end.y-start.y) )
     }
     ct1.stroke();
-    if (j>end.y){setTimeout(grow,90)}
+    if (j<100){setTimeout(grow,90)}
   }
      
    setTimeout(grow,350)
