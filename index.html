@@ -13,7 +13,7 @@
     ct1.lineWidth=2
     ct1.fillText("FinTop",10,50)
     end ={x: 170, y: 30}
-    start ={x:0, y: 300}
+    start ={x:150, y: 300}
      
    
      
@@ -23,8 +23,8 @@
       ct1.beginPath();
     for(i=0; i<200; i+=10){
        
-    ct1.moveTo(i+150, 200);
-    ct1.quadraticCurveTo(150+i/2,start.y+ (j/200)*(end.y-start.y) , 150+ .01*j*end.x+.01*(100-j)*i, start.y+ (j/100)*(end.y-start.y) )
+    ct1.moveTo(i+start.x, start.y);
+    ct1.quadraticCurveTo(start.x+i/2,start.y+ (j/200)*(end.y-start.y) , start.x+ .01*j*end.x+.01*(100-j)*i, start.y+ (j/100)*(end.y-start.y) )
     }
     ct1.stroke();
     j+=2
