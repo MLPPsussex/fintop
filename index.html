@@ -11,13 +11,13 @@
     c1.height = 800;
     ct1.font="30px Arial"
     ct1.fillText("FinTop",10,50)
-    end ={x: 150, y: 20}
+    end ={x: 170, y: 20}
     start ={x:0, y: 200}
      
    
      
   function grow(){
-    j++
+
      ct1.clearRect(100,0,300,220)
       ct1.beginPath();
     for(i=0; i<200; i+=10){
@@ -26,6 +26,7 @@
     ct1.quadraticCurveTo(150+i/2,start.y+ (j/200)*(end.y-start.y) , 150+ .01*j*end.x+.01*(100-j)*i, start.y+ (j/100)*(end.y-start.y) )
     }
     ct1.stroke();
+    j+=2
     if (j<100){setTimeout(grow,7)}
   }
      
