@@ -6,14 +6,17 @@
   <script>
     var c1 = document.getElementById('canvas');
     var ct1 = c1.getContext('2d');
-
+   var i
     // Set canvas dimensions
     c1.width = 800;
     c1.height = 800;
+    ct1.beginPath(); 
+    for(i=400; i<500; i+=5){
+       
     
-    ct1.beginPath();
-    ct1.moveTo(20, 20);
-    ct1.bezierCurveTo(20, 100, 200, 100, 200, 20);
+    ct1.moveTo(i, 200);
+    ct1.bezierCurveTo(20, 100, 200, 100, 200, 20)
+    }
     ct1.stroke();
 
   </script>
