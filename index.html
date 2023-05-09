@@ -21,8 +21,8 @@
 
      ct1.clearRect(100,0,350,320)
 
-    for(i=0; i<260; i+=15){
-      ct1.lineWidth=(1+(270-i)/45 )
+    for(i=0; i<260; i+=40){
+      ct1.lineWidth=(2+(270-i)/35 )
             ct1.beginPath(); 
       ct1.moveTo(i+start.x, start.y);
      ct1.quadraticCurveTo(start.x+i/2,start.y+ (j/200)*(end.y-start.y) , start.x+ .01*j*end.x+.01*(100-j)*i, start.y+ (j/100)*(end.y-start.y) )
