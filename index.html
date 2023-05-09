@@ -6,19 +6,23 @@
   <script>
     var c1 = document.getElementById('canvas');
     var ct1 = c1.getContext('2d');
-   var i
+   var i,j=200
     // Set canvas dimensions
     c1.width = 800;
     c1.height = 800;
-    ct1.beginPath(); 
+    ct1.beginPath();
+     
+  function grow(){
+     j--
     for(i=200; i<400; i+=10){
        
     
     ct1.moveTo(i, 200);
-    ct1.quadraticCurveTo(100+i/2, 90, 300, 20)
+    ct1.quadraticCurveTo(100+i/2, 90, 360, j)
     }
     ct1.stroke();
-
+    if (j>20){setTimeout(grow,3)}
+  }
   </script>
  </body>
  </html>
