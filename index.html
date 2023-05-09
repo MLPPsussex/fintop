@@ -1,5 +1,21 @@
+<!DOCTYPE html>
 <html>
-  <p> fintop </p>
-  <br>
-  <p>Website</p>
+   <p> fintop </p>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    var c1 = document.getElementById('canvas');
+    var ct1 = c1.getContext('2d');
+
+    // Set canvas dimensions
+    c1.width = 800;
+    c1.height = 800;
+    
+    ct1.beginPath();
+    ct1.moveTo(20, 20);
+    ct1.bezierCurveTo(20, 100, 200, 100, 200, 20);
+    ct1.stroke();
+
+  </script>
+ </body>
  </html>
