@@ -48,13 +48,13 @@
       hair[z].x+= 2*Math.sin(theta)
       hair[z].y-= 2*Math.cos(theta)
       ct1.lineTo(hair[z].x,hair[z].y)
-      theta+=0.002*(z+2)
+      theta+=0.005
     }
      
     ct1.stroke()  
     }
   
-    if (j<150){setTimeout(grow,350)}
+    if (j<150){setTimeout(grow,35)}
   }
      
    setTimeout(grow,350)
