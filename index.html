@@ -36,6 +36,7 @@
     */
     
     for (z=0; z<10; z++){
+      leng=2-.01*z
     theta=-z/10
       ct1.beginPath()
       hair[z].x=start.x+z*15
@@ -45,8 +46,9 @@
     j+=2
     
     for (k=0; k<=j; k+=2){
-      hair[z].x+= 2*Math.sin(theta)
-      hair[z].y-= 2*Math.cos(theta)
+      
+      hair[z].x+= leng*Math.sin(theta)
+      hair[z].y-= leng*Math.cos(theta)
       ct1.lineTo(hair[z].x,hair[z].y)
       theta+=0.02
     }
