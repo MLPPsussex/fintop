@@ -36,7 +36,7 @@
     */
     
     for (z=0; z<10; z++){
-    theta=0
+    theta=-z/10
       ct1.beginPath()
       hair[z].x=start.x+z*15
       hair[z].y=start.y
@@ -54,7 +54,7 @@
     ct1.stroke()  
     }
   
-    if (j<100){setTimeout(grow,350)}
+    if (j<150){setTimeout(grow,350)}
   }
      
    setTimeout(grow,350)
