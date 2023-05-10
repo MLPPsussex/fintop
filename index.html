@@ -5,7 +5,7 @@
   <script>
     var c1 = document.getElementById('canvas');
     var ct1 = c1.getContext('2d');
-   var i,j=0
+   var i,k,j=0, theta
     // Set canvas dimensions
     c1.width = 800;
     c1.height = 800;
@@ -20,7 +20,7 @@
   function grow(){
 
      ct1.clearRect(100,0,350,320)
-
+/*
     for(i=0; i<260; i+=40){
       ct1.lineWidth=(2+(270-i)/35 )
             ct1.beginPath(); 
@@ -28,6 +28,15 @@
      ct1.quadraticCurveTo(start.x+i/2,start.y+ (j/200)*(end.y-start.y) , start.x+ .01*j*end.x+.01*(100-j)*i, start.y+ (j/100)*(end.y-start.y) )
      ct1.stroke();
     }
+    */
+    theta=0
+     ct1.moveTo(start.x, start.y);
+    for (k=0; k<=j; k+=2){
+      ct1.lineTo(start.x+ 2*Math.sin(theta), start.y- 2*Math.cos(theta) )
+      theta+=0.005
+    }
+     
+      
    
     j+=2
     if (j<100){setTimeout(grow,15)}
