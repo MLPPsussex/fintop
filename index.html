@@ -43,9 +43,9 @@
       hair[z].y=start.y
      ct1.moveTo(hair[z].x, hair[z].y);
    
-    j+=2
+    j++
     
-    for (k=0; k<=j; k+=2){
+    for (k=0; k<=j; k++){
       
       hair[z].x+= leng*Math.sin(theta)
       hair[z].y-= leng*Math.cos(theta)
@@ -56,7 +56,7 @@
     ct1.stroke()  
     }
   
-    if (j<150){setTimeout(grow,500)}
+    if (j<100){setTimeout(grow,500)}
   }
      
    setTimeout(grow,350)
