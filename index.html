@@ -14,7 +14,7 @@
     ct1.fillText("FinTop",10,50)
     end ={x: 210, y: 30}
     start ={x:150, y: 300}
-    new={x:0, y: 0}
+    hair={x:0, y: 0}
     
      
   function grow(){
@@ -30,14 +30,14 @@
     */
     theta=0
      ct1.moveTo(start.x, start.y);
-     new.x=start.x
-    new.y=start.y
+     hair.x=start.x
+    hair.y=start.y
     j+=2
     
     for (k=0; k<=j; k+=2){
-      new.x+= 2*Math.sin(theta)
-      new.y-= 2*Math.cos(theta)
-      ct1.lineTo(new.x,new.y)
+      hair.x+= 2*Math.sin(theta)
+      hair.y-= 2*Math.cos(theta)
+      ct1.lineTo(hair.x,hair.y)
       theta+=0.005
     }
      
