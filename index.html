@@ -14,11 +14,10 @@
     ct1.fillText("FinTop",10,50)
     end ={x: 210, y: 30}
     start ={x:150, y: 300}
-     
-   
+    new={x:0, y: 0}
+    
      
   function grow(){
-
      ct1.clearRect(100,0,350,320)
 /*
     for(i=0; i<260; i+=40){
@@ -31,14 +30,19 @@
     */
     theta=0
      ct1.moveTo(start.x, start.y);
+     new.x=start.x
+    new.y=start.y
+    j+=2
+    
     for (k=0; k<=j; k+=2){
-      ct1.lineTo(start.x+ 2*Math.sin(theta), start.y- 2*Math.cos(theta) )
+      new.x+= 2*Math.sin(theta)
+      new.y-= 2*Math.cos(theta)
+      ct1.lineTo(new.x,new.y)
       theta+=0.005
     }
      
       
-   
-    j+=2
+  
     if (j<100){setTimeout(grow,15)}
   }
      
