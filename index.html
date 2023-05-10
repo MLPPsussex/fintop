@@ -37,6 +37,7 @@
     
     for (z=0; z<10; z++){
     theta=0
+      ct1.beginPath()
      ct1.moveTo(start.x+z*15, start.y);
    
     j+=2
@@ -49,6 +50,7 @@
     }
      
     ct1.stroke()  
+    }
   
     if (j<100){setTimeout(grow,15)}
   }
