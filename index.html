@@ -38,7 +38,9 @@
     for (z=0; z<10; z++){
     theta=0
       ct1.beginPath()
-     ct1.moveTo(start.x+z*15, start.y);
+      hair[z].x=start.x+z*15
+      hair[z].y=start.y
+     ct1.moveTo(hair[z].x, hair[z].y);
    
     j+=2
     
